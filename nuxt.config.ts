@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/',
     buildAssetsDir: '/',
+    cdnURL: './',
     head: {
       charset: 'utf-8',
       htmlAttrs: {
