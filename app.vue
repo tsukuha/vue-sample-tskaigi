@@ -1,9 +1,3 @@
-<script setup lang="ts">
-useCounter()
-</script>
-
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtPage />
 </template>
