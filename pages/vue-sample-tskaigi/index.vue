@@ -25,6 +25,7 @@ const confirm = async () => {
 
 <template>
   <div>
+    <p class="alert">実際のパスワードは入れないでください</p>
     <p>
       ID
       <input
@@ -56,4 +57,6 @@ input
   display: block
 .button-wrapper
   display: flex
+.alert
+  color: red
 </style>
