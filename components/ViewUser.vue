@@ -12,6 +12,6 @@ defineProps({
   <div>
     <p>名前: {{ user.name }}</p>
     <p>メールアドレス: {{ user.email }}</p>
-    <p>権限: {{ user.type }}</p>
+    <p>種別: {{ user.type }}</p>
   </div>
 </template>
