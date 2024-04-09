@@ -4,6 +4,8 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   app: {
+    baseURL: '/',
+    buildAssetsDir: '/',
     head: {
       charset: 'utf-8',
       htmlAttrs: {
