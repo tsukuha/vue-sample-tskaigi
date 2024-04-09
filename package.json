@@ -1,0 +1,43 @@
+{
+  "name": "vue-playground",
+  "version": "1.0.0",
+  "author": "Tsukuha Kawakami",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "rm -rf /tmp/nitro && HOST=localhost PORT=8080 nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "prettier --check . & eslint -c ./eslint.config.js .",
+    "lint:fix": "prettier --write . & eslint --fix  -c ./eslint.config.js ."
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "nuxt": "^3.11.1",
+    "pinia": "^2.1.7",
+    "sass": "^1.72.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "@nuxt/devtools": "latest",
+    "@types/eslint__eslintrc": "^2.1.1",
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.24.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3",
+    "vue-eslint-parser": "^9.4.2",
+    "vue-tsc": "^1.8.27"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-arm64-gnu": "^4.9.1",
+    "@rollup/rollup-linux-x64-gnu": "^4.9.1"
+  },
+  "main": "index.js",
+  "license": "ISC",
+  "description": ""
+}
