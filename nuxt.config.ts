@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   ssr: false,
   vue: {
-    // NOTE: テスト用のタグをバンドルしないための設定
+    // NOTE: テスト用の属性をバンドルしないための設定
     compilerOptions: {
       whitespace: 'preserve',
       nodeTransforms: [
