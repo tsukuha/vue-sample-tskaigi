@@ -1,5 +1,24 @@
 export default defineNuxtConfig({
   ssr: false,
+  vue: {
+    // NOTE: テスト用のタグをバンドルしないための設定
+    compilerOptions: {
+      whitespace: 'preserve',
+      nodeTransforms: [
+        (node) => {
+          if (node.type === 1 /* NodeTypes.ELEMENT */) {
+            for (let i = 0; i < node.props.length; i++) {
+              const p = node.props[i]
+              if (p && p.type === 6 /* NodeTypes.ATTRIBUTE */ && p.name === 'data-test') {
+                node.props.splice(i, 1)
+                i--
+              }
+            }
+          }
+        },
+      ],
+    },
+  },
   typescript: {
     typeCheck: true,
   },
@@ -22,11 +41,6 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@pinia/nuxt', '@nuxt/devtools'],
-  vue: {
-    compilerOptions: {
-      whitespace: 'preserve',
-    },
-  },
   vite: {
     $client: {
       build: {

@@ -28,27 +28,16 @@ const confirm = async () => {
     <p class="alert">実際のパスワードは入れないでください</p>
     <p>
       ID
-      <input
-        :value="id"
-        @input="inputId($event)"
-      >
+      <input :value="id" @input="inputId($event)" />
     </p>
     <p>
       パスワード
-      <input
-        :value="password"
-        @input="inputPassword($event)"
-      >
+      <input :value="password" @input="inputPassword($event)" />
     </p>
     <div class="button-wrapper">
-      <button @click="confirm()">
-        確認
-      </button>
+      <button @click="confirm()">確認</button>
     </div>
-    <ViewUser
-      v-if="userStore.user !== undefined"
-      :user="userStore.user"
-    />
+    <ViewUser v-if="userStore.user !== undefined" :user="userStore.user" />
   </div>
 </template>
 

@@ -4,5 +4,5 @@
   "compilerOptions": {
     "noUncheckedIndexedAccess": true
   },
-  "exclude": ["node_modules", "**/__tests_/**/*"]
+  "exclude": ["node_modules"]
 }

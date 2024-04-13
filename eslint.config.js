@@ -12,7 +12,7 @@ const compat = new FlatCompat()
 
 module.exports = [
   {
-    ignores: ['eslint.config.js', 'node_modules', '.nuxt', '.output', '.data', '.nitro', '.cache', 'dist'],
+    ignores: ['eslint.config.js', 'node_modules', '.nuxt', '.output', '.data', '.nitro', '.cache', 'dist', 'coverage'],
   },
   eslintRecommended,
   eslintConfigPrettier,
