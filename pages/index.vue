@@ -34,9 +34,9 @@ const confirm = async () => {
       <input :value="password" @input="inputPassword($event)" />
     </p>
     <div class="button-wrapper">
-      <button @click="confirm()">確認</button>
+      <button type="button" @click="confirm()">確認</button>
     </div>
-    <ViewUser v-if="userStore.user !== undefined" :user="userStore.user" />
+    <ViewUser v-if="userStore?.user !== undefined" :user="userStore.user" />
   </div>
 </template>
 

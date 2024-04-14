@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import type { User } from '~/api/user'
 
-defineProps({
-  user: {
-    type: Object as PropType<User>,
-    required: true,
-  },
-})
+defineProps<{
+  user: User
+}>()
 </script>
 
 <template>

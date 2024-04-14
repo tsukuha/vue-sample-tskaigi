@@ -40,7 +40,6 @@ module.exports = [
         'vue/require-v-for-key': 'off',
         'vue/multi-word-component-names': 'off',
         'vue/require-toggle-inside-transition': 'off',
-        'vue/attribute-hyphenation': 'off',
       },
     },
     {
