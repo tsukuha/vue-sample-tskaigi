@@ -1,3 +1,6 @@
+
+
+
 import type { ResultOk, ResultError } from "./common"
 
 export type UserType = 'admin' | 'general'
