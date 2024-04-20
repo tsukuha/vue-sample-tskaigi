@@ -1,4 +1,4 @@
-import type { ResultOk, ResultError, ResultType } from "./common"
+import type { ResultOk, ResultError } from "./common"
 
 export type UserType = 'admin' | 'general'
 export interface User {
