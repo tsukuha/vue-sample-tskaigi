@@ -1,3 +1,5 @@
+import type { ResultOk, ResultError, ResultType } from "./common"
+
 export type UserType = 'admin' | 'general'
 export interface User {
   id: string
@@ -6,15 +8,20 @@ export interface User {
   provider: string
   type: UserType
 }
-export const getUser = async (id: string, password: string) => {
+export interface GetUserError {
+  message: string
+}
+
+export const getUser = async (
+  id: string,
+  password: string
+): Promise<ResultOk<User> | ResultError<GetUserError>> => {
   // $fetchの実態はofetchというライブラリで実装されています
-  return $fetch<User>('/user', {
+  return $fetch<ResultOk<User>>('/user', {
     method: 'POST',
     body: {
       id,
       password,
     },
-  }).catch((err: { status: number; data: { message: string } }) => {
-    return err.data
   })
 }

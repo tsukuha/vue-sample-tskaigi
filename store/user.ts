@@ -1,15 +1,16 @@
 import { ref } from 'vue'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { getUser, type User } from '~/api/user'
+import { ResultType } from '~/api/common'
 export const useUserStore = defineStore('user', () => {
   const user = ref<User | undefined>(undefined)
   const getUserData = async (id: string, password: string) => {
     const res = await getUser(id, password)
-    if ('message' in res) {
-      alert(res.message)
+    if (res.kind === ResultType.Err) {
+      alert(res.data.message)
       return
     }
-    user.value = res
+    user.value = res.data
   }
   return {
     user,
