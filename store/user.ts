@@ -1,6 +1,3 @@
-
-
-
 import { ref } from 'vue'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { getUser, type User } from '~/api/user'
