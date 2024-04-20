@@ -16,7 +16,7 @@ export const getUser = async (
   id: string,
   password: string
 ): Promise<ResultOk<User> | ResultError<GetUserError>> => {
-  // $fetchの実態はofetchというライブラリで実装されています
+  // Nuxt3の$fetchの実態はofetchというライブラリで実装されています
   return $fetch<ResultOk<User>>('/user', {
     method: 'POST',
     body: {
