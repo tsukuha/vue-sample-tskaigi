@@ -6,7 +6,7 @@ TSKaigi 2024用に利用するサンプルコードです。
 
 ```.sh
 npm i
-npm run build dev
+npm run dev
 ```
 
 run on http://localhost:8080
