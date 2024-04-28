@@ -7,15 +7,15 @@ const userStore = useUserStore()
 const id = ref<string | undefined>(undefined)
 const password = ref<string | undefined>(undefined)
 
-const inputId = (value: Event) => {
+function inputId(value: Event): void {
   const target = value.target as HTMLInputElement | null
   id.value = target?.value
 }
-const inputPassword = (value: Event) => {
+function inputPassword(value: Event): void {
   const target = value.target as HTMLInputElement | null
   password.value = target?.value
 }
-const confirm = async () => {
+async function confirm(): Promise<void> {
   if (id.value === undefined || password.value === undefined) {
     return
   }
@@ -27,14 +27,14 @@ const confirm = async () => {
   <div>
     <p>
       ID
-      <input :value="id" @input="inputId($event)" />
+      <input type="text" :value="id" @input="inputId" />
     </p>
     <p>
       パスワード
-      <input :value="password" @input="inputPassword($event)" />
+      <input type="password" :value="password" @input="inputPassword" />
     </p>
     <div class="button-wrapper">
-      <button type="button" @click="confirm()">確認</button>
+      <button type="button" @click="confirm">確認</button>
     </div>
     <ViewUser v-if="userStore?.user !== undefined" :user="userStore.user" />
   </div>

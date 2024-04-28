@@ -4,7 +4,8 @@ import { getUser, type User } from '~/api/user'
 import { RESULT_TYPE } from '~/api/common'
 export const useUserStore = defineStore('user', () => {
   const user = ref<User | undefined>(undefined)
-  const getUserData = async (id: string, password: string) => {
+
+  async function getUserData(id: string, password: string): Promise<void> {
     const res = await getUser(id, password)
     if (res.ok === RESULT_TYPE.Error) {
       alert(res.data.message)

@@ -12,7 +12,7 @@ export interface GetUserError {
   message: string
 }
 
-export const getUser = async (id: string, password: string): Promise<ResultOk<User> | ResultError<GetUserError>> => {
+export async function getUser(id: string, password: string): Promise<ResultOk<User> | ResultError<GetUserError>> {
   // Nuxt3の$fetchの実態はofetchというライブラリで実装されています
   return $fetch<ResultOk<User>>('/user', {
     method: 'POST',
