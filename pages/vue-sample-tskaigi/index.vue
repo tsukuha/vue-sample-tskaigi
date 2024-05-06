@@ -28,11 +28,11 @@ async function confirm(): Promise<void> {
     <p class="alert">実際のパスワードは入れないでください</p>
     <p>
       ID
-      <input type="text" :value="id" @input="inputId($event)" />
+      <input type="text" :value="id" @input="inputId" />
     </p>
     <p>
       パスワード
-      <input type="password" :value="password" @input="inputPassword($event)" />
+      <input type="password" :value="password" @input="inputPassword" />
     </p>
     <div class="button-wrapper">
       <button type="button" @click="confirm">確認</button>
